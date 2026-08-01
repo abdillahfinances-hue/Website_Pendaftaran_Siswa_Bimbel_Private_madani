@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran - Bimbel Private Madani</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo-group">
+      <img src="img/logomadani.jpeg" alt="logo madani" class="logo-img">
+      <h1>Bimbel Private Madani</h1>
+    </div>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="tentor.html">Pilih Tentor</a>
+    </nav>
+  </header>
+
+  <section class="tentor-hero">
+    <h2>Formulir Pendaftaran</h2>
+    <p>Lengkapi data di bawah ini untuk mendaftarkan putra/putri Anda. Setelah dikirim, kami akan menghubungi Anda melalui WhatsApp untuk info pembayaran.</p>
+    <a href="tentor.html" class="btn-kembali">← Kembali ke Pilih Tentor</a>
+  </section>
+
+  <form id="form-daftar">
+
+    <h2>Data Orang Tua / Wali</h2>
+
+    <label for="ortu_nama">Nama Orang Tua / Wali</label>
+    <input type="text" id="ortu_nama" required>
+
+    <label for="ortu_hp">Nomor HP (aktif WhatsApp)</label>
+    <input type="tel" id="ortu_hp" placeholder="08xxxxxxxxxx" required>
+
+    <label for="ortu_kerja">Pekerjaan</label>
+    <input type="text" id="ortu_kerja" required>
+
+    <label for="ortu_alamat">Alamat Lengkap</label>
+    <textarea id="ortu_alamat" rows="2" required></textarea>
+
+    <h2>Data Siswa</h2>
+
+    <label for="siswa_nama">Nama Lengkap Siswa</label>
+    <input type="text" id="siswa_nama" required>
+
+    <label for="siswa_tempat">Tempat Lahir</label>
+    <input type="text" id="siswa_tempat" required>
+
+    <label for="siswa_tanggal">Tanggal Lahir</label>
+    <input type="date" id="siswa_tanggal" required>
+
+    <label for="siswa_alamat">Alamat Lengkap Siswa</label>
+    <textarea id="siswa_alamat" rows="2" required></textarea>
+
+    <label for="siswa_tinggal">Tinggal Bersama Siapa</label>
+    <input type="text" id="siswa_tinggal" placeholder="cth: Orang tua, nenek, dll" required>
+
+    <label for="siswa_sekolah">Sekolah Asal</label>
+    <input type="text" id="siswa_sekolah" required>
+
+    <label for="siswa_ket">Keterangan Alamat Detail (opsional)</label>
+    <textarea id="siswa_ket" rows="2" placeholder="Patokan rumah, RT/RW, dsb."></textarea>
+
+    <h2>Data Program</h2>
+
+    <label for="f_program">Program yang Dipilih</label>
+    <select id="f_program" required>
+      <option value="">— Pilih Program —</option>
+      <option value="KMPU">Kelas Mata Pelajaran Umum</option>
+      <option value="KMPI">Kelas Mengaji &amp; Pendidikan Islam</option>
+      <option value="KBA">Kelas Bahasa Asing</option>
+    </select>
+
+    <label for="f_jenjang">Jenjang</label>
+    <select id="f_jenjang" required>
+      <option value="">— Pilih Jenjang —</option>
+      <option value="TK">TK</option>
+      <option value="SD">SD</option>
+      <option value="SMP">SMP</option>
+      <option value="SMA">SMA</option>
+      <option value="Pradewasa/Dewasa">Pradewasa / Dewasa</option>
+    </select>
+
+    <div id="field-mapel">
+      <label for="f_mapel">Mata Pelajaran (khusus jenjang SMA)</label>
+      <input type="text" id="f_mapel" placeholder="cth: Matematika, Fisika">
+    </div>
+
+    <label for="f_tentor">Tentor Pilihan</label>
+    <select id="f_tentor" required>
+      <option value="">— Pilih Program dulu untuk melihat tentor —</option>
+    </select>
+
+    <label for="f_wilayah">Wilayah Belajar</label>
+    <select id="f_wilayah" required>
+      <option value="">— Pilih Wilayah —</option>
+      <option value="Air Joman">Air Joman</option>
+      <option value="Kisaran">Kisaran</option>
+    </select>
+
+    <button type="submit" class="btn">Kirim Pendaftaran</button>
+
+  </form>
+
+  <footer>
+    <p>© 2026 Bimbel Private Madani</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
