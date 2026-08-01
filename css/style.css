@@ -353,7 +353,7 @@ footer {
    
 }
 
-/* ============================================
+/*============================================
    12. HALAMAN TENTOR (lengkap)
    ============================================ */
 .tentor-hero {
@@ -372,7 +372,7 @@ footer {
 }
 
 .tentor-section:nth-child(even) {
-  background: #FAF8FD; /* selang-seling warna biar tiap grup kelas kebeda dikit */
+  background: #FAF8FD;  
 }
 
 .tentor-section-title {
@@ -464,4 +464,112 @@ footer {
 .btn-full {
   text-align: center;
   margin-top: auto;
+} */
+
+/* ============================================
+   13. FORM TENTOR (daftar-tentor.html)
+   ============================================ */
+#form-tentor {
+  max-width: 560px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #F3EDFB;
+  border-radius: 12px;
+}
+
+#form-tentor h2 {
+  font-size: 1.1rem;
+  margin-top: 22px;
+  color: #3B2158;
+}
+
+#form-tentor label {
+  display: block;
+  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  color: #3B2158;
+}
+
+#form-tentor input,
+#form-tentor select,
+#form-tentor textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #C9B6E8;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #FFFFFF;
+  font-family: inherit;
+}
+
+#form-tentor input:focus,
+#form-tentor select:focus,
+#form-tentor textarea:focus {
+  outline: none;
+  border-color: #7C4DBC;
+}
+
+#form-tentor button {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.checkbox-item {
+  display: flex ;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500 ;
+  background: #FFFFFF;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1.5px solid #C9B6E8;
+  margin-top: 0 ;
+  cursor: pointer;
+}
+
+.checkbox-item input {
+  width: auto ;
+}
+
+/* ============================================
+   14. STATE KOSONG (tentor.html sebelum ada data)
+   ============================================ */
+.tentor-kosong {
+  text-align: center;
+  color: #8A7A9E;
+  font-style: italic;
+  padding: 30px;
+  width: 100%;
+}
+
+/* ============================================
+   15. FORM DAFTAR (formulir.html) - lengkapi select & textarea
+   ============================================ */
+#form-daftar select,
+#form-daftar textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #C9B6E8;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #FFFFFF;
+  font-family: inherit;
+}
+
+#form-daftar select:focus,
+#form-daftar textarea:focus {
+  outline: none;
+  border-color: #7C4DBC;
+}
+
+#field-mapel {
+  display: none; /* disembunyikan default, nanti JS yang munculin kalau jenjang = SMA */
 }
