@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Sebagai Tentor - Bimbel Private Madani</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo-group">
+      <img src="img/logomadani.jpeg" alt="logo madani" class="logo-img">
+      <h1>Bimbel Private Madani</h1>
+    </div>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="tentor.html">Lihat Tentor</a>
+    </nav>
+  </header>
+
+  <section class="tentor-hero">
+    <h2>Daftar Sebagai Tentor</h2>
+    <p>Isi data diri kamu di bawah ini. Data yang dikirim akan langsung tampil di halaman "Pilih Tentor" agar bisa dilihat calon murid.</p>
+    <a href="tentor.html" class="btn-kembali">← Kembali ke Daftar Tentor</a>
+  </section>
+
+  <form id="form-tentor">
+
+    <h2>Data Diri</h2>
+
+    <label for="t_nama">Nama Lengkap</label>
+    <input type="text" id="t_nama" placeholder="cth: Abdillah Razli Siregar" required>
+
+    <label for="t_pendidikan">Pendidikan Terakhir / Sedang Ditempuh</label>
+    <input type="text" id="t_pendidikan" placeholder="cth: S1 Ilmu Komputer" required>
+
+    <label for="t_institusi">Institusi / Kampus / Sekolah</label>
+    <input type="text" id="t_institusi" placeholder="cth: Universitas Royal" required>
+
+    <h2>Program &amp; Jenjang</h2>
+
+    <label for="t_program">Program yang Diajar</label>
+    <select id="t_program" required>
+      <option value="">— Pilih Program —</option>
+      <option value="KMPU">Kelas Mata Pelajaran Umum</option>
+      <option value="KMPI">Kelas Mengaji &amp; Pendidikan Islam</option>
+      <option value="KBA">Kelas Bahasa Asing</option>
+    </select>
+
+    <label>Jenjang yang Bisa Diajar</label>
+    <div class="checkbox-group">
+      <label class="checkbox-item"><input type="checkbox" name="t_jenjang" value="TK"> TK</label>
+      <label class="checkbox-item"><input type="checkbox" name="t_jenjang" value="SD"> SD</label>
+      <label class="checkbox-item"><input type="checkbox" name="t_jenjang" value="SMP"> SMP</label>
+      <label class="checkbox-item"><input type="checkbox" name="t_jenjang" value="SMA"> SMA</label>
+    </div>
+
+    <label for="t_status">Status Tentor</label>
+    <select id="t_status" required>
+      <option value="">— Pilih Status —</option>
+      <option value="Tetap">Tetap</option>
+      <option value="Part-time">Part-time</option>
+    </select>
+
+    <h2>Wilayah &amp; Jadwal</h2>
+
+    <label for="t_wilayah">Wilayah Mengajar</label>
+    <input type="text" id="t_wilayah" placeholder="cth: Air Joman" required>
+
+    <label for="t_jadwal">Jam Ketersediaan Mengajar</label>
+    <input type="text" id="t_jadwal" placeholder="cth: 16.00 – 19.00 WIB" required>
+
+    <h2>Tentang Kamu</h2>
+
+    <label for="t_deskripsi">Deskripsi Singkat / Gaya Mengajar</label>
+    <textarea id="t_deskripsi" rows="3" placeholder="cth: Tentor berpengalaman mengajar dengan metode pembelajaran yang menyenangkan." required></textarea>
+
+    <button type="submit" class="btn">Kirim &amp; Tampilkan di Halaman Tentor</button>
+
+  </form>
+
+  <footer>
+    <p>© 2026 Bimbel Private Madani</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
