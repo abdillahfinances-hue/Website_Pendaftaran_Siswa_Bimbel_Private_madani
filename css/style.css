@@ -464,7 +464,7 @@ footer {
 .btn-full {
   text-align: center;
   margin-top: auto;
-} */
+} 
 
 /* ============================================
    13. FORM TENTOR (daftar-tentor.html)
@@ -572,4 +572,270 @@ footer {
 
 #field-mapel {
   display: none; /* disembunyikan default, nanti JS yang munculin kalau jenjang = SMA */
+}
+
+/* ============================================
+   16. UPDATE: FOTO PROFIL TENTOR (diperbesar)
+   ============================================ */
+.tentor-foto {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;      /* ganti dari contain ke cover */
+  object-position: center top;  /* fokus ke bagian atas/muka */
+  border-radius: 50%;
+  margin: 0 auto 14px;
+  display: block;
+}
+
+/* Avatar inisial (fallback kalau tentor gak isi link foto)
+   dibesarkan juga biar konsisten sama .tentor-foto */
+.tentor-avatar {
+  width: 100%;
+  height: 140px;
+  border-radius: 80px;
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+}
+
+.field-hint {
+  font-size: 0.8rem;
+  color: #6B5C80;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+/* ============================================
+   17. READ MORE DESKRIPSI TENTOR
+   ============================================ */
+.desc-clamp {
+  max-height: 4.2em;   /* kira-kira 3 baris teks */
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.3s ease;
+}
+
+.desc-clamp.desc-expanded {
+  max-height: 500px;  /* dibuat gede biar teks penuh muncul semua */
+}
+
+.btn-readmore {
+  background: none;
+  border: none;
+  color: #7C4DBC;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 4px 0 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.btn-readmore:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   18. MEDIA QUERY - TAMPILAN HP & TABLET
+   Aturan di bawah ini CUMA berlaku kalau lebar layar <= 768px
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* Header: logo & nav jangan mepet-mepet banget */
+  header {
+    padding: 12px 16px;
+    gap: 10px;
+  }
+
+  header h1 {
+    font-size: 1.1rem;
+  }
+
+  .logo-img {
+    height: 32px;
+  }
+
+  nav a {
+    margin-left: 12px;
+    font-size: 0.9rem;
+  }
+
+  /* Judul besar diperkecil biar gak makan tempat */
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  /* Padding section dikecilin, HP layarnya sempit */
+  .hero,
+  .keunggulan,
+  .promo,
+  .kontak,
+  .tentor-hero,
+  .tentor-section {
+    padding: 32px 16px;
+  }
+
+  /* Foto dashboard hero: 70% masih agak gede di HP kecil */
+  .hero .dashboarding {
+    width: 90%;
+    border-width: 6px;
+  }
+
+  /* Card program & tentor: pastiin gak mepet ke tepi layar */
+  .card,
+  .tentor-card,
+  .fitur-card {
+    max-width: 100%;
+  }
+
+  /* Tombol kontak (WA) numpuk ke bawah, gak sejajar */
+  .admin-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-kontak {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    margin: 6px 0;
+  }
+
+  /* Form (semua halaman) - padding dikecilin */
+  #form-daftar,
+  #form-tentor {
+    padding: 20px;
+    margin: 24px auto;
+  }
+
+  /* Checkbox program/jenjang numpuk rapi, gak kepotong */
+  .checkbox-group {
+    gap: 8px;
+  }
+
+  .checkbox-item {
+    padding: 8px 12px;
+    font-size: 0.88rem;
+  }
+}
+
+/* ============================================================
+   Breakpoint tambahan buat HP KECIL (misal HP lama/layar sempit)
+   ============================================================ */
+@media (max-width: 420px) {
+
+  .hero h2 {
+    font-size: 1.3rem;
+  }
+
+  .hero .dashboarding {
+    width: 100%;
+    border-width: 4px;
+  }
+
+  nav a {
+    margin-left: 8px;
+    font-size: 0.82rem;
+  }
+
+  .tentor-foto,
+  .tentor-avatar {
+    height: 160px;
+  }
+}
+
+.tentor-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #3B2158;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+/* ============================================
+   FOOTER (versi baru)
+   ============================================ */
+footer {
+  background: #2A1840;   /* ungu lebih gelap, lebih premium */
+  color: #D8C9EF;
+  padding: 0;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-brand h3 {
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 0.85rem;
+  color: #B39FD4;
+  max-width: 320px;
+  margin-bottom: 0;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: #D8C9EF;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #FFFFFF;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 16px 24px;
+}
+
+.footer-bottom p {
+  font-size: 0.8rem;
+  color: #9A82C2;
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    align-items: center;
+  }
+}
+
+.footer-links a {
+  color: #D8C9EF;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-links a i {
+  font-size: 1rem;
+  width: 18px;
+  text-align: center;
 }
