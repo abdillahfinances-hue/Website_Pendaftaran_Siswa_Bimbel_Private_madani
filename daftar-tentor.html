@@ -40,13 +40,12 @@
 
     <h2>Program &amp; Jenjang</h2>
 
-    <label for="t_program">Program yang Diajar</label>
-    <select id="t_program" required>
-      <option value="">— Pilih Program —</option>
-      <option value="KMPU">Kelas Mata Pelajaran Umum</option>
-      <option value="KMPI">Kelas Mengaji &amp; Pendidikan Islam</option>
-      <option value="KBA">Kelas Bahasa Asing</option>
-    </select>
+    <label>Program yang Diajar (boleh pilih lebih dari 1)</label>
+    <div class="checkbox-group">
+      <label class="checkbox-item"><input type="checkbox" name="t_program" value="KMPU"> Mata Pelajaran Umum</label>
+      <label class="checkbox-item"><input type="checkbox" name="t_program" value="KMPI"> Mengaji &amp; Pendidikan Islam</label>
+      <label class="checkbox-item"><input type="checkbox" name="t_program" value="KBA"> Bahasa Asing</label>
+    </div>
 
     <label>Jenjang yang Bisa Diajar</label>
     <div class="checkbox-group">
@@ -71,6 +70,12 @@
     <label for="t_jadwal">Jam Ketersediaan Mengajar</label>
     <input type="text" id="t_jadwal" placeholder="cth: 16.00 – 19.00 WIB" required>
 
+    <h2>Foto Profil</h2>
+
+    <label for="t_foto">Link Foto Profil (opsional)</label>
+    <input type="url" id="t_foto" placeholder="https://drive.google.com/... atau link foto lainnya">
+    <p class="field-hint">Upload dulu foto kamu ke Google Drive (atur jadi "siapa saja yang punya link"), Imgur, atau layanan sejenis, lalu tempel link-nya di sini. Kalau dikosongkan, sistem akan pakai inisial nama sebagai foto sementara.</p>
+
     <h2>Tentang Kamu</h2>
 
     <label for="t_deskripsi">Deskripsi Singkat / Gaya Mengajar</label>
@@ -80,9 +85,24 @@
 
   </form>
 
-  <footer>
-    <p>© 2026 Bimbel Private Madani</p>
-  </footer>
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h3>Bimbel Private Madani</h3>
+      <p>Alamat: Jl. Pasar X Melintang, Desa Punggulan, Kecamatan Air Joman, Kabupaten Asahan.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="https://www.instagram.com/bbmadani1/" target="_blank" rel="noopener">Instagram: @bbmadani1</a>
+      <a href="https://www.facebook.com/people/Bimbel-Madani/pfbid0xAMiiVLrNDbcASPhSvd1KUkJCDHoiE4sBPLPVETUDaSpa7eMY3v68R1vgZ3euXQ9l/" target="_blank" rel="noopener"> Facebook: Bimbel Madani</a>
+      <a href="mailto:bimbelmadani97@gmail.com"> bimbelmadani97@gmail.com</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Bimbel Private Madani. All rights reserved.</p>
+  </div>
+</footer>
 
   <script src="js/script.js"></script>
 </body>
